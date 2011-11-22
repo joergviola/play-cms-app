@@ -3,7 +3,8 @@
 require:
     - play
     - play -> secure
-    - local -> cms 0.1
+#    - local -> cms 0.1
+    - mine -> cms 0.1
    
 repositories: 
    - local: 
@@ -12,3 +13,8 @@ repositories:
        contains: 
          - local -> * 
 
+   - mine: 
+       type:       local 
+       artifact:   "${application.path}/lib/[module]-[revision].zip" 
+       contains: 
+         - mine -> * 
