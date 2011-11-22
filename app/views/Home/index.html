@@ -1,0 +1,28 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<p>
+This is a demo app for the <a href="https://github.com/joergviola/play-cms">Play!CMS Module</a>.
+</p>
+<p>
+#{if session.get("username")}
+If you would <a href="/logout">logout</a>, 
+you'd no longer be able to <a href="/page/admin">change pages</a>.
+#{/if}
+#{else}
+If you would <a href="/login">login</a>, 
+you could enter the <a href="/page/admin">CMS admin page</a>.
+<div style="font-size: 70%"> 
+(All users are acepted, user 'cms' has page edit rights.)
+</div>
+#{/else}
+</p>
+<p>
+#{cms.display 'paragraph'}
+	You may simply edit this paragraph in the CMS.
+#{/cms.display}
+</p>
+<p>
+And this <a href="/page/Home">whole page</a> is delivered by the CMS
+</p>
+<p>Beware! All CMS pages and images are deleted every hour!</p>

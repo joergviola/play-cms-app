@@ -1,0 +1,14 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> secure
+    - local -> cms 0.1
+   
+repositories: 
+   - local: 
+       type:       local 
+       artifact:   "/Users/viola/Workspaces/play/[module]" 
+       contains: 
+         - local -> * 
+

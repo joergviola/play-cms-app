@@ -1,0 +1,20 @@
+#{extends 'page.html' /}
+
+#{set 'moreStyles'}
+        #{get 'moreStyles' /}
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+#{/set}        
+
+
+#{set 'header'}
+	<a href="/"><span style="font-size: 500%">Play!CMS</span></a>
+#{/set}        
+
+#{doLayout /}
+
+#{set 'footer'}
+	Developed as part of the 
+	<a href="http://playhackathon.herokuapp.com/">2011 Play Hackathon</a> 
+	and using the 
+	<a href="http://www.playframework.org/">Play Framework</a>
+#{/set}        
