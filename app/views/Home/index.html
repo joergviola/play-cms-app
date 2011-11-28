@@ -3,6 +3,7 @@
 
 <p>
 This is a demo app for the <a href="https://github.com/joergviola/play-cms">Play!CMS Module</a>.
+You can experiment and create pages. But beware! All CMS pages and images are deleted every hour!
 </p>
 <p>
 #{if session.get("username")}
@@ -18,11 +19,25 @@ you could enter the <a href="/page/admin">CMS admin page</a>.
 #{/else}
 </p>
 <p>
+What you can do here:
+<ul>
+	<li>Create end edit page like <a href="/page/Home">this one</a>.</li>
+	<li>Edit parts of pages like this one: '
 #{cms.display 'paragraph'}
-	You may simply edit this paragraph in the CMS.
-#{/cms.display}
+	This is the part
+#{/cms.display}'
+	</li>
+	<li>You can even manage complete menue structures of pages:
+		<ul>
+#{list items:page?.findByTag('index'), as:'p' }
+		<li>
+			<a href="/page/${p.name}">${p.title}</a>
+		</li>
+#{/list}
+		</ul>
+	</li>
+</ul>
 </p>
 <p>
-And this <a href="/page/Home">whole page</a> is delivered by the CMS
+
 </p>
-<p>Beware! All CMS pages and images are deleted every hour!</p>

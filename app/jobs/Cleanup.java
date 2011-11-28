@@ -20,6 +20,22 @@ public class Cleanup extends Job {
     	home.active = true;
     	home.body = "<h1>Home</h1>This is the first CMS page. Feel free to edit.";
     	home.save();
+    	CMSPage tagged1 = new CMSPage();
+    	tagged1.name = "First";
+    	tagged1.title = "First";
+    	tagged1.tags = "index";
+    	tagged1.sort = 1;
+    	tagged1.active = true;
+    	tagged1.body = "<h1>First</h1>This is the first CMS page in the front page enumeration. Feel free to edit.";
+    	tagged1.save();
+    	CMSPage tagged2 = new CMSPage();
+    	tagged2.name = "Second";
+    	tagged2.title = "Second";
+    	tagged2.tags = "index";
+    	tagged2.sort = 2;
+    	tagged2.active = true;
+    	tagged2.body = "<h1>First</h1>This is the second CMS page in the front page enumeration. Feel free to edit.";
+    	tagged2.save();
     }
 }
  
